@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ブログ | 花のべんきょうノート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#d6ebfc; --petal:#7db4ec; --blue:#3f86d0; --navy:#1d4a85;
+  --sun:#f8c630; --amber:#e8960b; --brown:#5a3912; --leaf:#4b7a2b; --cream:#fff8df;
+  --text:#1f2a3a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;color:var(--text);line-height:1.9;background:var(--cream)}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+.nemo{
+  background-color:var(--sky);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg transform='translate(22,22)'%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(0)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(72)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(144)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(216)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(288)'/%3E%3Ccircle r='4.5' fill='%23fff'/%3E%3Ccircle cx='-1.5' cy='-1' r='.8' fill='%231d4a85'/%3E%3Ccircle cx='1.5' cy='1' r='.8' fill='%231d4a85'/%3E%3C/g%3E%3Cg transform='translate(66,62) scale(.8)'%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(20)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(92)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(164)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(236)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(308)'/%3E%3Ccircle r='4.5' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
+  position:relative;
+}
+.nemo::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(214,235,252,.15),rgba(214,235,252,.9) 100%);pointer-events:none}
+.nemo > *{position:relative}
+
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem 1.5rem;padding:1rem clamp(1rem,5vw,3rem)}
+.logo{font-family:"Yusei Magic","Zen Maru Gothic",sans-serif;font-size:1.3rem;color:var(--navy);text-decoration:none}
+nav ul{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;list-style:none}
+nav a{text-decoration:none;color:var(--navy);font-weight:500;padding:.2rem .1rem;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current]{border-bottom-color:var(--blue)}
+
+.title{text-align:center;padding:2rem 1rem 2.4rem}
+.title h1{font-family:"Yusei Magic","Zen Maru Gothic",sans-serif;font-weight:400;font-size:clamp(1.8rem,6vw,2.6rem);color:var(--navy)}
+.title p{color:#2c4a6e}
+
+main{background:linear-gradient(to bottom,var(--sky),var(--cream) 220px);padding:1rem clamp(.8rem,4vw,2rem) 3.5rem}
+.timeline{max-width:600px;margin:0 auto;list-style:none;background:#fff;border:2px solid var(--petal);border-radius:20px;overflow:hidden}
+.post{padding:1.1rem 1.4rem;border-bottom:1px solid #d9e8f6}
+.post:last-child{border-bottom:none}
+.post time{display:block;font-size:.85rem;color:var(--blue);font-weight:700}
+.post p{margin-top:.2rem;white-space:pre-line}
+
+.sun{
+  background-color:var(--sun);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Cg transform='translate(36,36)'%3E%3Cg fill='%23f0a90a'%3E%3Cellipse cy='-19' rx='6' ry='12'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(45)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(90)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(135)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(180)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(225)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(270)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='10' fill='%235a3912'/%3E%3Ccircle r='5' fill='%237a5220'/%3E%3C/g%3E%3Cg transform='translate(98,96) scale(.75)'%3E%3Cg fill='%23fbd34f'%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(22)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(67)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(112)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(157)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(202)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(247)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(292)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(337)'/%3E%3C/g%3E%3Ccircle r='10' fill='%235a3912'/%3E%3C/g%3E%3C/svg%3E");
+  position:relative;padding:2.2rem 1rem;text-align:center}
+.sun::before{content:"";position:absolute;inset:0;background:rgba(248,198,48,.85);pointer-events:none}
+.sun > *{position:relative}
+.back{display:inline-block;text-decoration:none;background:var(--cream);color:var(--brown);font-weight:700;border:3px solid var(--brown);border-radius:999px;padding:.5rem 1.6rem}
+.back:hover{background:#fff}
+
+footer{background:var(--leaf);color:#f3f8e9;text-align:center;padding:1.4rem 1rem;font-size:.9rem}
+</style>
+</head>
+<body>
+
+<div class="nemo">
+  <header>
+    <a class="logo" href="index.html">花のべんきょうノート</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="blog.html" aria-current="page">ブログ</a></li>
+        <li><a href="column.html">コラム</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="title">
+    <h1>ブログ</h1>
+    <p>花の勉強の進捗を、日付と一言で。</p>
+  </div>
+</div>
+
+<main>
+  <!-- 新しい投稿は一番上に追加してください -->
+  <ol class="timeline">
+    <li class="post">
+      <time datetime="2026-10-01">2026.10.01</time>
+      <p>サイトづくりをスタート。まずはネモフィラと向日葵から勉強していく。</p>
+    </li>
+    <li class="post">
+      <time datetime="2026-09-28">2026.09.28</time>
+      <p>ネモフィラの花言葉を調べた。「可憐」と「あなたを許す」。名前の由来も気になるので次回に持ち越し。</p>
+    </li>
+    <li class="post">
+      <time datetime="2026-09-25">2026.09.25</time>
+      <p>向日葵はキク科。大きな花は、実は小さな花の集まりだと知って驚いた。</p>
+    </li>
+    <li class="post">
+      <time datetime="2026-09-20">2026.09.20</time>
+      <p>図鑑を借りてきた。春の花と夏の花を分けてノートにまとめ始める。</p>
+    </li>
+  </ol>
+</main>
+
+<div class="sun">
+  <a class="back" href="index.html">ホームにもどる</a>
+</div>
+
+<footer>
+  <p>© 花のべんきょうノート</p>
+</footer>
+
+</body>
+</html>
