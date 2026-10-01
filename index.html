@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>花のべんきょうノート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#d6ebfc; --petal:#7db4ec; --blue:#3f86d0; --navy:#1d4a85;
+  --sun:#f8c630; --amber:#e8960b; --brown:#5a3912; --leaf:#4b7a2b; --cream:#fff8df;
+  --text:#1f2a3a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;color:var(--text);line-height:1.9;background:var(--cream)}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+/* ネモフィラ（上） */
+.nemo{
+  background-color:var(--sky);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg transform='translate(22,22)'%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(0)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(72)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(144)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(216)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(288)'/%3E%3Ccircle r='4.5' fill='%23fff'/%3E%3Ccircle cx='-1.5' cy='-1' r='.8' fill='%231d4a85'/%3E%3Ccircle cx='1.5' cy='1' r='.8' fill='%231d4a85'/%3E%3C/g%3E%3Cg transform='translate(66,62) scale(.8)'%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(20)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(92)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(164)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(236)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(308)'/%3E%3Ccircle r='4.5' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
+  position:relative;
+}
+.nemo::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(214,235,252,.15),rgba(214,235,252,.85) 100%);pointer-events:none}
+.nemo > *{position:relative}
+
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem 1.5rem;padding:1rem clamp(1rem,5vw,3rem)}
+.logo{font-family:"Yusei Magic","Zen Maru Gothic",sans-serif;font-size:1.3rem;color:var(--navy);text-decoration:none}
+nav ul{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;list-style:none}
+nav a{text-decoration:none;color:var(--navy);font-weight:500;padding:.2rem .1rem;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current]{border-bottom-color:var(--blue)}
+
+.hero{padding:clamp(2.5rem,9vw,6rem) 1.2rem clamp(3rem,8vw,5rem);display:flex;justify-content:center}
+.hero-card{background:rgba(255,255,255,.88);border-radius:28px;padding:clamp(1.6rem,5vw,3rem) clamp(1.4rem,6vw,3.5rem);max-width:640px;text-align:center;box-shadow:0 8px 28px rgba(29,74,133,.18)}
+.hero h1{font-family:"Yusei Magic","Zen Maru Gothic",sans-serif;font-weight:400;font-size:clamp(2rem,7vw,3.2rem);line-height:1.3;color:var(--navy);margin-bottom:.8rem}
+.hero p{color:#2c4a6e}
+
+.nemo-body{padding:1rem clamp(1rem,5vw,3rem) 4.5rem}
+.panel{max-width:760px;margin:0 auto;background:rgba(255,255,255,.9);border-radius:22px;padding:1.6rem clamp(1.2rem,4vw,2.4rem)}
+.panel h2{font-size:1.25rem;color:var(--navy);margin-bottom:.5rem}
+.panel p{max-width:36em}
+
+.wave{display:block;width:100%;height:60px;margin-top:-1px}
+
+/* 向日葵（下） */
+.sun{
+  background-color:var(--sun);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Cg transform='translate(36,36)'%3E%3Cg fill='%23f0a90a'%3E%3Cellipse cy='-19' rx='6' ry='12'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(45)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(90)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(135)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(180)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(225)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(270)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='10' fill='%235a3912'/%3E%3Ccircle r='5' fill='%237a5220'/%3E%3C/g%3E%3Cg transform='translate(98,96) scale(.75)'%3E%3Cg fill='%23fbd34f'%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(22)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(67)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(112)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(157)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(202)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(247)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(292)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(337)'/%3E%3C/g%3E%3Ccircle r='10' fill='%235a3912'/%3E%3C/g%3E%3C/svg%3E");
+  position:relative;padding:2.5rem clamp(1rem,5vw,3rem) 3rem;
+}
+.sun::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(248,198,48,.92),rgba(248,198,48,.55) 100%);pointer-events:none}
+.sun > *{position:relative}
+.sun h2{text-align:center;font-family:"Yusei Magic","Zen Maru Gothic",sans-serif;font-weight:400;font-size:1.6rem;color:var(--brown);margin-bottom:1.6rem}
+
+.cards{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
+.card{display:block;text-decoration:none;background:var(--cream);border:3px solid var(--brown);border-radius:20px;padding:1.3rem 1.4rem;transition:transform .15s}
+.card:hover{transform:translateY(-4px)}
+.card h3{font-size:1.15rem;color:var(--brown);margin-bottom:.3rem}
+.card p{font-size:.95rem;color:#4d3a1e;line-height:1.7}
+
+footer{background:var(--leaf);color:#f3f8e9;text-align:center;padding:1.4rem 1rem;font-size:.9rem}
+
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- 上：ネモフィラ -->
+<div class="nemo">
+  <header>
+    <a class="logo" href="index.html">花のべんきょうノート</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html" aria-current="page">ホーム</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="column.html">コラム</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <h1>花のことを、<br>ゆっくり学ぶ。</h1>
+      <p>調べて、描いて、書き留める。<br>花の勉強の記録をまとめたサイトです。</p>
+    </div>
+  </section>
+
+  <div class="nemo-body">
+    <section class="panel">
+      <h2>ネモフィラ</h2>
+      <p>北米原産の一年草。春になると、空と同じ色の小さな花が地面いっぱいに広がります。花言葉は「あなたを許す」「可憐」。</p>
+    </section>
+  </div>
+</div>
+
+<svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,0 C200,60 400,60 600,30 C800,0 1000,0 1200,40 L1200,60 L0,60 Z" fill="#f8c630"/>
+  <path d="M0,0 L1200,0 L1200,40 C1000,0 800,0 600,30 C400,60 200,60 0,0 Z" fill="#d6ebfc"/>
+</svg>
+
+<!-- 下：向日葵 -->
+<div class="sun">
+  <section class="panel" style="margin-bottom:2.4rem">
+    <h2>向日葵</h2>
+    <p>キク科の一年草で、北米原産。つぼみのころは太陽を追って向きを変え、花が開くと東を向いて動かなくなります。花言葉は「あなただけを見つめる」。</p>
+  </section>
+
+  <h2>ページをえらぶ</h2>
+  <div class="cards">
+    <a class="card" href="blog.html">
+      <h3>ブログ</h3>
+      <p>勉強の進捗を、日付と一言で。</p>
+    </a>
+    <a class="card" href="column.html">
+      <h3>コラム</h3>
+      <p>漫画・イラスト・4コマと、軽い読みものの記事。</p>
+    </a>
+    <a class="card" href="about.html">
+      <h3>このサイトについて</h3>
+      <p>サイトの目的と、作っている人のこと。</p>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>© 花のべんきょうノート</p>
+</footer>
+
+</body>
+</html>
