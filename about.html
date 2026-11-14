@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>このサイトについて | 花のべんきょうノート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#d6ebfc; --petal:#7db4ec; --blue:#3f86d0; --navy:#1d4a85;
+  --sun:#f8c630; --amber:#e8960b; --brown:#5a3912; --leaf:#4b7a2b; --cream:#fff8df;
+  --text:#1f2a3a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;color:var(--text);line-height:1.9;background:var(--cream)}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+.nemo{
+  background-color:var(--sky);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg transform='translate(22,22)'%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(0)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(72)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(144)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(216)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%237db4ec' transform='rotate(288)'/%3E%3Ccircle r='4.5' fill='%23fff'/%3E%3Ccircle cx='-1.5' cy='-1' r='.8' fill='%231d4a85'/%3E%3Ccircle cx='1.5' cy='1' r='.8' fill='%231d4a85'/%3E%3C/g%3E%3Cg transform='translate(66,62) scale(.8)'%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(20)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(92)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(164)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(236)'/%3E%3Cellipse cy='-7' rx='6' ry='8' fill='%235a9fe0' transform='rotate(308)'/%3E%3Ccircle r='4.5' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
+  position:relative;
+}
+.nemo::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(214,235,252,.15),rgba(214,235,252,.9) 100%);pointer-events:none}
+.nemo > *{position:relative}
+
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem 1.5rem;padding:1rem clamp(1rem,5vw,3rem)}
+.logo{font-family:"Yusei Magic","Zen Maru Gothic",sans-serif;font-size:1.3rem;color:var(--navy);text-decoration:none}
+nav ul{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;list-style:none}
+nav a{text-decoration:none;color:var(--navy);font-weight:500;padding:.2rem .1rem;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current]{border-bottom-color:var(--blue)}
+
+.title{text-align:center;padding:2rem 1rem 2.4rem}
+.title h1{font-family:"Yusei Magic","Zen Maru Gothic",sans-serif;font-weight:400;font-size:clamp(1.8rem,6vw,2.6rem);color:var(--navy)}
+.title p{color:#2c4a6e}
+
+.links{background:linear-gradient(to bottom,var(--sky),var(--cream) 260px);padding:1rem clamp(1rem,4vw,2rem) 3rem}
+.wrap{max-width:900px;margin:0 auto}
+.intro{background:#fff;border:2px solid var(--petal);border-radius:20px;padding:1.4rem clamp(1.2rem,4vw,2rem);margin-bottom:2.2rem}
+.intro h2{font-size:1.2rem;color:var(--navy);margin-bottom:.3rem}
+
+.label{display:flex;align-items:center;gap:.8rem;font-weight:700;color:var(--navy);margin-bottom:.9rem}
+.label::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--petal),transparent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-bottom:2rem}
+.card{display:flex;align-items:center;gap:.9rem;text-decoration:none;background:#fff;border:2px solid var(--petal);border-radius:16px;padding:.9rem 1rem;transition:transform .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--blue)}
+.card .ic{flex-shrink:0;width:44px;height:44px;display:grid;place-items:center;font-size:1.5rem;background:var(--sky);border-radius:12px}
+.card .tx{flex:1;min-width:0}
+.card b{display:block;color:var(--navy);line-height:1.5}
+.card small{display:block;color:#4d6785;font-size:.82rem;line-height:1.5}
+.card .ar{color:var(--blue);font-size:1.2rem}
+
+.wave{display:block;width:100%;height:60px;margin-top:-1px}
+
+.sun{
+  background-color:var(--sun);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Cg transform='translate(36,36)'%3E%3Cg fill='%23f0a90a'%3E%3Cellipse cy='-19' rx='6' ry='12'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(45)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(90)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(135)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(180)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(225)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(270)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='10' fill='%235a3912'/%3E%3Ccircle r='5' fill='%237a5220'/%3E%3C/g%3E%3Cg transform='translate(98,96) scale(.75)'%3E%3Cg fill='%23fbd34f'%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(22)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(67)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(112)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(157)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(202)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(247)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(292)'/%3E%3Cellipse cy='-19' rx='6' ry='12' transform='rotate(337)'/%3E%3C/g%3E%3Ccircle r='10' fill='%235a3912'/%3E%3C/g%3E%3C/svg%3E");
+  position:relative;padding:2.5rem clamp(1rem,4vw,2rem) 3rem}
+.sun::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(248,198,48,.92),rgba(248,198,48,.6));pointer-events:none}
+.sun > *{position:relative}
+.form-card{max-width:620px;margin:0 auto;background:var(--cream);border:3px solid var(--brown);border-radius:20px;padding:1.6rem clamp(1.2rem,4vw,2.2rem)}
+.form-card h2{font-family:"Yusei Magic","Zen Maru Gothic",sans-serif;font-weight:400;font-size:1.4rem;color:var(--brown);text-align:center;margin-bottom:.5rem}
+.form-intro{text-align:center;color:#4d3a1e;font-size:.95rem;margin-bottom:1.2rem}
+.group{margin-bottom:1rem}
+.group label{display:block;font-weight:700;color:var(--brown);font-size:.9rem}
+.req{color:#c0392b}
+.group input,.group textarea{width:100%;font:inherit;color:var(--text);background:#fff;border:2px solid #d9b24a;border-radius:10px;padding:.6rem .8rem}
+.group textarea{min-height:140px;resize:vertical}
+.field-error{display:block;color:#b03a2e;font-size:.82rem}
+.submit{font:inherit;font-weight:700;color:var(--brown);background:var(--sun);border:3px solid var(--brown);border-radius:999px;padding:.55rem 1.8rem;cursor:pointer}
+.submit:hover{background:#ffd84d}
+.submit:disabled{opacity:.5;cursor:not-allowed}
+.form-success{background:#e8f5d8;border:2px solid var(--leaf);border-radius:12px;padding:.9rem 1rem;text-align:center;color:#2f5a14;margin-bottom:1rem}
+.form-error-global{background:#fde8e6;border:2px solid #c0392b;border-radius:12px;padding:.7rem 1rem;color:#8e2a20;margin-bottom:1rem}
+.back{display:block;width:max-content;margin:1.6rem auto 0;text-decoration:none;background:var(--cream);color:var(--brown);font-weight:700;border:3px solid var(--brown);border-radius:999px;padding:.45rem 1.5rem}
+.back:hover{background:#fff}
+
+footer{background:var(--leaf);color:#f3f8e9;text-align:center;padding:1.4rem 1rem;font-size:.82rem;line-height:1.8}
+footer p{max-width:800px;margin:0 auto .4rem}
+
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<div class="nemo">
+  <header>
+    <a class="logo" href="index.html">花のべんきょうノート</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="column.html">コラム</a></li>
+        <li><a href="about.html" aria-current="page">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="title">
+    <h1>このサイトについて</h1>
+    <p>リンクとお問い合わせ</p>
+  </div>
+</div>
+
+<section class="links">
+  <div class="wrap">
+    <div class="intro">
+      <h2>花のべんきょうノートとは</h2>
+      <p>花について調べたこと・描いたこと・考えたことを、ブログとコラムにまとめている勉強サイトです。ご連絡は下のSNSかお問い合わせフォームからお願いします。</p>
+    </div>
+
+    <p class="label">漫画・イラスト掲載サイト</p>
+    <div class="grid">
+      <a class="card" href="https://rookie.shonenjump.com/users/14728546961183734555" target="_blank" rel="noopener">
+        <span class="ic">📚</span>
+        <span class="tx"><b>ジャンプルーキー</b><small>オリジナル漫画を掲載中</small></span>
+        <span class="ar">›</span>
+      </a>
+      <a class="card" href="https://www.pixiv.net/users/105728284" target="_blank" rel="noopener">
+        <span class="ic">🎨</span>
+        <span class="tx"><b>Pixiv</b><small>二次創作はこちらに掲載</small></span>
+        <span class="ar">›</span>
+      </a>
+    </div>
+
+    <p class="label">SNS・その他</p>
+    <div class="grid">
+      <a class="card" href="https://bsky.app/profile/azaleaazalea88.bsky.social" target="_blank" rel="noopener">
+        <span class="ic">🦋</span>
+        <span class="tx"><b>Bluesky</b><small>近況・作品のお知らせ</small></span>
+        <span class="ar">›</span>
+      </a>
+      <a class="card" href="https://www.youtube.com/@LilyPopins0512" target="_blank" rel="noopener">
+        <span class="ic">🎬</span>
+        <span class="tx"><b>YouTube（リリポピ）</b><small>動画チャンネル</small></span>
+        <span class="ar">›</span>
+      </a>
+      <a class="card" href="https://lilipopi.github.io/lilypopins/" target="_blank" rel="noopener">
+        <span class="ic">🌸</span>
+        <span class="tx"><b>リリポピのホームページ</b><small>別サイト</small></span>
+        <span class="ar">›</span>
+      </a>
+    </div>
+
+    <p class="label">Azalea72のホームページ</p>
+    <div class="grid">
+      <a class="card" href="https://azaleacreativeroom888.github.io/storyreviewazalea/" target="_blank" rel="noopener">
+        <span class="ic">📖</span>
+        <span class="tx"><b>書評サイト</b><small>本・アニメ・映画・ゲーム・小説の備忘録</small></span>
+        <span class="ar">›</span>
+      </a>
+      <a class="card" href="https://azaleacreativeroom888.github.io/fan-english/" target="_blank" rel="noopener">
+        <span class="ic">🍔</span>
+        <span class="tx"><b>英語サイト（English Site）</b><small>英語話者と英語学習者に向けたサイト</small></span>
+        <span class="ar">›</span>
+      </a>
+      <a class="card" href="https://azaleacreativeroom888.github.io/fan-watercolor/" target="_blank" rel="noopener">
+        <span class="ic">☁️</span>
+        <span class="tx"><b>水彩画サイト</b><small>水彩画掲載</small></span>
+        <span class="ar">›</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,0 C200,60 400,60 600,30 C800,0 1000,0 1200,40 L1200,60 L0,60 Z" fill="#f8c630"/>
+  <path d="M0,0 L1200,0 L1200,40 C1000,0 800,0 600,30 C400,60 200,60 0,0 Z" fill="#fff8df"/>
+</svg>
+
+<section class="sun">
+  <div class="form-card">
+    <h2>お問い合わせフォーム</h2>
+    <p class="form-intro">ご質問・ご感想などはこちらからどうぞ。<br>Gmailで受け取り、返信いたします。</p>
+
+    <div data-fs-success class="form-success" style="display:none;">
+      <p>メッセージを送信しました。ありがとうございます！</p>
+    </div>
+    <div data-fs-error class="form-error-global" style="display:none;"></div>
+
+    <form id="contact-form" action="https://formspree.io/f/maqvpvoz" method="POST">
+      <div class="group">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" placeholder="お名前">
+      </div>
+      <div class="group">
+        <label for="email">メールアドレス <span class="req">*</span></label>
+        <input type="email" id="email" name="email" data-fs-field placeholder="example@email.com" required>
+        <span data-fs-error="email" class="field-error"></span>
+      </div>
+      <div class="group">
+        <label for="message">メッセージ <span class="req">*</span></label>
+        <textarea id="message" name="message" data-fs-field placeholder="メッセージを入力してください…" rows="6" required></textarea>
+        <span data-fs-error="message" class="field-error"></span>
+      </div>
+      <button class="submit" type="submit" data-fs-submit-btn>📮 送信する</button>
+    </form>
+  </div>
+
+  <a class="back" href="index.html">ホームにもどる</a>
+</section>
+
+<footer>
+  <p>当サイトに掲載されている画像・文章・作品について、AI学習への利用、トレース（トレパク）、無断転載、二次利用を禁止します。</p>
+  <p>Please refrain from using any images, text, or works on this website for AI training, tracing, unauthorized reproduction, redistribution, or secondary use.</p>
+  <p>© 花のべんきょうノート</p>
+</footer>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'maqvpvoz' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
